@@ -1,0 +1,23 @@
+---------------------------------------------------Etape 1----------------------------------------------
+#Commande pour chercher si il y a des mises à jour et de les mettre à jour
+sudo apt-get update && sudo apt-get upgrade
+#Installer git (pour cloner l’outil de vmware)
+sudo apt-get install git
+#Installation du compiler C++
+sudo apt-get install gcc-12
+#Installation des outils de développements du noyau essentiels
+sudo apt install build-essential linux-headers-$(uname -r)
+#Commande pour chercher si il y a des mises à jour 
+sudo apt-get update
+---------------------------------------------------Etape 2----------------------------------------------
+sudo chmod +x ./[Ubuntu]VMware-Workstation-Full-17.0.2.bundle
+sudo ./[Ubuntu]VMware-Workstation-Full-17.0.2.bundle
+---------------------------------------------------Etape 3----------------------------------------------
+git clone https://github.com/mkubecek/vmware-host-modules
+cd vmware-host-modules/
+git checkout workstation-17.0.2
+sudo make
+sudo make install
+---------------------------------------------------Etape 4----------------------------------------------
+sudo /etc/init.d/vmware restart
+
