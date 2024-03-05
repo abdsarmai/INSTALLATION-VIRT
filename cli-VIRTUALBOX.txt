@@ -1,0 +1,15 @@
+---------------------------------------------------Etape 1----------------------------------------------
+sudo apt-get update && sudo apt-get upgrade
+cd Téléchargements/
+----------------------------Si le poste possède une version inférieur à 7.0.12----------------------------
+sudo apt-get remove virtualbox
+sudo apt-get purge virtualbox
+----------------------------------------------------------------------------------------------------------
+---------------------------------------------------Etape 2----------------------------------------------
+sudo dpkg -i virtualbox-7.0.12.deb
+sudo apt-get install -y
+sudo apt --fix-broken install
+---------------------------------------------------Si soucis avec /sbin/vboxconfig----------------------------------------------
+sudo /sbin/vboxconfig
+sudo apt-get update && sudo apt-get upgrade
+sudo /sbin/vboxconfig
